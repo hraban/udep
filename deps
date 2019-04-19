@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eu -o pipefail
+${DEBUGSH+set -x}
+
+export PATH="$PATH:$PWD"
+
+prog="$1"
+
+isdone="$($prog is-done)"
+if [[ "$isdone" == no ]]; then
+	$prog dependencies | xargs -n 1 "$0"
+	$prog run
+fi
+
+# Just for safety check once more
+isdone="$($prog is-done)"
+if [[ "$isdone" == no ]]; then
+	>&2 echo "$prog not done after running"
+	exit 1
+fi
