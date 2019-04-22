@@ -3,7 +3,7 @@
 set -eu -o pipefail
 ${DEBUGSH+set -x}
 
-export PATH="$PATH:$PWD"
+PATH="$PWD:$PATH"
 
 prog="$1"
 
