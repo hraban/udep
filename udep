@@ -15,3 +15,6 @@ elif [[ "$isdone" != yes ]]; then
 	>2 echo "Unexpected output from $prog is-done: $isdone"
 	exit 1
 fi
+
+# Copyright © 2019 Hraban Luyat <hraban@0brg.net>
+# This program is licensed under the AGPL v3
