@@ -75,7 +75,6 @@ Just dump it in your PATH somewhere. Or symlink to it.
 
 ## License
 
-udep, a minimalist dependency resolution and build framework
 Copyright © 2019 Hraban Luyat <hraban@0brg.net>
 
 This program is free software: you can redistribute it and/or modify
