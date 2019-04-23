@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -eu -o pipefail
+${DEBUGSH+set -x}
+
+case "$1" in
+	dependencies)
+		echo build-dir
+		echo a
+		echo b
+		;;
+	run)
+		echo "I am all!"
+		(cd build ; cat a b > all)
+		;;
+	is-done)
+		[[ -f build/all ]] && echo yes || echo no
+		;;
+	*)
+		>&2 echo "$0: Unexpected argument: $1"
+		exit 1
+		;;
+esac
+
