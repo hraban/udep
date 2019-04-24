@@ -6,8 +6,8 @@ Usage:
 
     udep all
 
-Look at the output in the `build` directory. Try deleting only the file `a`, and
-run the above command again.
+Look at the output in the `build` directory. Try deleting only the files
+`build/a` and `build/all`, and run the above command again.
 
 Example of parallel dependency execution:
 
