@@ -66,7 +66,7 @@ example using files only.
 
 Make works great for files, but poorly when rules are more esoteric and less to
 do with files. E.g. spinning up servers, setting DNS records, or generally
-devops related work. I was chatting to a friend about what the simplest, most
+devops related work. I was chatting to Doug about what the simplest, most
 minimalistic essence of a dependency resolving build system is, and this was the
 result.
 
