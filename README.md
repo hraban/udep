@@ -14,6 +14,12 @@ The best explanation is probably to have a look at the examples directory.
 
 ## Usage
 
+(A _rule_ is something you want to build: e.g. `main.css` for your
+final, minified CSS, or `my-server` if you have a rule that launches a
+server. A _recipe_ is a small script which builds the target of your
+rule. For the CSS file, that might be running SASS. For the server,
+maybe you invoke the AWS CLI to launch an EC2 instance.)
+
 In Make, there is a central location (Makefile) which contains declarations for
 every rule, its dependencies, and its recipe. In udep, there is no such central
 location: every rule is a separate script / program / binary in the PWD, which
