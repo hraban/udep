@@ -15,3 +15,5 @@ Example of parallel dependency execution:
     udep all
 
 Notice how the total wait time is only 3 seconds, not 2×3 = 6 seconds.
+
+(N.B.: Parallel execution doesn't actually work properly with complicated rules. I'm leaving it in because I can, but it's broken as hell.)
