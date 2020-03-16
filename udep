@@ -4,15 +4,14 @@ set -eu -o pipefail
 ${DEBUGSH+set -x}
 
 PATH="$PWD:$PATH"
-
 prog="$1"
-
 isdone="$($prog is-done)"
+
 if [[ "$isdone" == no ]]; then
 	$prog dependencies | tr \\n \\0 | xargs -0 -n 1 -P ${PARALLEL-1} "$0"
 	$prog run
 elif [[ "$isdone" != yes ]]; then
-	>2 echo "Unexpected output from $prog is-done: $isdone"
+	>&2 echo "Unexpected output from $prog is-done: $isdone"
 	exit 1
 fi
 
